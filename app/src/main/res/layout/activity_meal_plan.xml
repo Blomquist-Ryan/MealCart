@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealPlan">
+
+    <TextView
+        android:id="@+id/mealPlanTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|left"
+        android:text="Meal Plan"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mealPlan"
+        android:layout_width="408dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mealPlanTitle" />
+
+    <Button
+        android:id="@+id/toCookbook"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Recipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toShoppingCart"
+        app:layout_constraintTop_toBottomOf="@+id/pantryList" />
+
+    <Button
+        android:id="@+id/toShoppingCart"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Shopping Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toPantry"
+        app:layout_constraintTop_toBottomOf="@+id/pantryList" />
+
+    <Button
+        android:id="@+id/toPantry"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:text="Shopping Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantryList" />
+
+    <TextView
+        android:id="@+id/weekOf"
+        android:layout_width="192dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center|left"
+        android:text="1/20/21 - 2/1/21"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/nextWeek"
+        app:layout_constraintStart_toEndOf="@+id/previousWeek"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/previousWeek"
+        android:layout_width="31dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/mealPlanTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/nextWeek"
+        android:layout_width="31dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:rotationY="174"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

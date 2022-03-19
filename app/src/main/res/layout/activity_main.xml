@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addToPantryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Add Ingredient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toEndOf="@+id/pantryTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pantryTitle"
+        android:layout_width="190dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|left"
+        android:text="Pantry"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pantryList"
+        android:layout_width="408dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantryTitle" />
+
+    <Button
+        android:id="@+id/toCookbook"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Recipes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toShoppingCart"
+        app:layout_constraintTop_toBottomOf="@+id/pantryList" />
+
+<!--    <Button-->
+<!--        android:id="@+id/toMealPlan"-->
+<!--        android:layout_width="121dp"-->
+<!--        android:layout_height="68dp"-->
+<!--        android:layout_marginEnd="28dp"-->
+<!--        android:layout_marginRight="28dp"-->
+<!--        android:text="Meal Plan"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/toCookbook"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/pantryList" />-->
+
+    <Button
+        android:id="@+id/toShoppingCart"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:text="Shopping Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantryList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
